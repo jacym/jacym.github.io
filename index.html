@@ -25,7 +25,7 @@ p.inner{
 	color: white;
 	font-family: Raleway, sans-serif;
 }
-ul {
+ul.nav {
     list-style-type: none;
     font-family:Raleway, sans-serif;
     background-color:rgba(128,128,128,0.5);
@@ -39,13 +39,13 @@ ul {
 
 }
 
-li {
+li.nav {
     float: left;
     border-right:1px solid #bbb;
     border-left:1px solid #bbb;
 }
 
-li a {
+li a.nav {
     display: block;
     color: white;
     text-align: center;
@@ -87,11 +87,12 @@ p.copyright{
     font-size: 10px;
     clear: both;
     position: relative;
-    z-index: 10;
+    z-index: 0;
     height: 3em;
     margin-top: -3em;
     display:block;
     text-align: center;
+    bottom:0;
 }
 h1.title{
     padding-top:100px;
@@ -107,6 +108,30 @@ h1.title{
     top:0;
     left:0;
 }*/
+ul.sub{
+    list-style: none;
+    position: absolute;
+    text-align: left;
+    padding-bottom:30px;
+    padding-top: 30px;
+    margin-right:auto;
+}
+li.pj{
+    display:inline-block;
+    padding-right: 300px;
+    color: white;
+    font-size:40px;
+    font-family: Raleway, sans-serif;
+}
+div.footer {
+    position:relative;
+    bottom:0px;
+    width:100%;
+    text-align:center;
+    padding-top: 160px;
+    padding-bottom: 0px
+
+}
 </style>
 <title>Jacy Mark</title>
 </head>
@@ -114,13 +139,13 @@ h1.title{
 <!--<div class="statich"></div>-->
 <!-------------header objects--------- -->
 <h1 class="header">Jacy Mark</h1>
-<ul>
-  <li><a class="active smoothScroll" href="#home">Home</a></li>
-  <li><a href="#projects" class="smoothScroll">Projects</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="https://www.dragonfruitcode.com">DragonFruit Coding</a></li>
-  <li><a href="#blog">Blog</a></li>
-  <li><a href="#about">About</a></li>
+<ul class="nav">
+  <li class="nav"><a class="active smoothScroll nav" href="#home">Home</a></li>
+  <li class="nav"><a href="#projects" class="smoothScroll nav">Projects</a></li>
+  <li class="nav"><a href="#contact"class="smoothScroll nav">Contact</a></li>
+  <li class="nav"><a href="https://www.dragonfruitcode.com" class="smoothScroll nav">DragonFruit Coding</a></li>
+  <li class="nav"><a href="#blog" class="smoothScroll nav">Blog</a></li>
+  <li class="nav"><a href="#about" class="smoothScroll nav">About</a></li>
 </ul>
 <a name="home"></a>
 <div class="pad">
@@ -129,30 +154,18 @@ h1.title{
 <h1 class="top">Welcome to my personal Website</h1>
 <!--make this into an actual statement-->
 <p class="inner">This website serves to quickly display information about Jacy Mark.</p>
+
 <a name="projects"></a>
-    <h1 class="title">PROJECTS</h1>
-    <p class="inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis ullamcorper tortor, sed malesuada lacus aliquet eleifend. Curabitur mattis nisl imperdiet augue mattis iaculis. Fusce pellentesque tempus magna iaculis laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse blandit purus erat, sit amet bibendum magna luctus eu. Nullam non tortor imperdiet quam tincidunt convallis quis non arcu. Aliquam quis quam ex. Cras laoreet semper nisl at vulputate. Morbi consectetur dictum turpis non rhoncus.
+<h1 class="title">PROJECTS</h1>
+<ul class="sub">
+    <li class="pj">Python</li>
+    <li class="pj">HTML/CSS/Jquery</li>
+</ul>
 
-Sed ut fermentum ante. Quisque porttitor tempus metus. Phasellus rutrum diam eu ante ullamcorper, sed dignissim ante cursus. In efficitur volutpat tellus ac ultrices. Nam finibus erat sed ante mollis semper. Morbi sit amet dui laoreet, sagittis enim sed, aliquet urna. Maecenas vel tortor et neque fringilla gravida. Vivamus turpis est, commodo in rhoncus id, dignissim et orci. Vivamus iaculis porta est, eget feugiat turpis. Phasellus a pellentesque orci. Donec condimentum quam quis dapibus ullamcorper. Quisque ac elementum ipsum, non congue dui. Maecenas vel urna tincidunt, auctor dui sodales, cursus quam. Ut at maximus sem. In vitae tellus at massa tincidunt euismod nec facilisis dolor. Morbi ut lorem at dui vestibulum volutpat.
-
-Quisque ac sagittis massa, in congue tortor. Phasellus ut justo diam. Morbi ac maximus nibh, at iaculis augue. Nullam rhoncus ligula ac malesuada mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam scelerisque lectus, a consectetur lectus egestas nec. Vivamus ac posuere tellus. Vestibulum ultrices et urna nec fringilla. Nulla consectetur quam justo, eu ultrices libero aliquam quis. Praesent odio dui, ultricies a ultrices sit amet, mollis a nisi. Pellentesque eget quam sem. Nullam et risus urna. Donec vestibulum, justo ac ullamcorper tempus, dui eros auctor orci, eget laoreet velit mauris ac felis.
-
-Morbi nisi tellus, iaculis a urna at, auctor faucibus urna. Sed quam turpis, scelerisque non finibus at, dignissim eu nibh. Mauris et sem ante. Duis ut felis non tortor gravida pulvinar et ut orci. Quisque gravida commodo iaculis. Morbi eu lorem vel nibh condimentum pretium. Aenean libero ex, convallis luctus maximus non, facilisis ac nisl. Donec consectetur libero et dictum accumsan. Sed eget accumsan turpis, vitae suscipit leo. Nam ac sem eu eros vehicula ultrices vitae ac lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ultrices turpis vitae augue mattis accumsan ut sodales neque. Praesent sit amet ex ornare, porttitor dui nec, interdum nulla.
-
-Curabitur ullamcorper eros est, eu dapibus mi commodo id. Nam et imperdiet odio. Morbi sollicitudin felis velit, at dignissim ipsum commodo id. Donec bibendum at velit ut porttitor. Nulla varius nunc eu ex aliquam tristique. Nunc rhoncus est tellus, et aliquam velit semper nec. Morbi dictum lectus et sapien ullamcorper, ut auctor lacus venenatis. Vestibulum rhoncus dictum dapibus. Donec vitae porta lacus, sit amet tristique arcu. Morbi condimentum lobortis est id commodo. Vestibulum in nisl vel purus ultricies dictum. Vestibulum maximus, risus sed consequat accumsan, justo eros fermentum eros, quis ullamcorper elit magna at libero.
-
-Vestibulum dignissim vitae ligula varius accumsan. Sed lacinia, metus luctus sodales elementum, libero leo hendrerit neque, et posuere nulla neque id odio. Vestibulum vitae fringilla ipsum. Vestibulum faucibus accumsan leo sit amet scelerisque. Aenean commodo nulla mauris, a fermentum nisl consequat a. Phasellus scelerisque blandit purus, at luctus velit euismod ac. Aenean faucibus, velit nec euismod aliquam, nibh libero tristique dui, eu porttitor ante massa ut tortor.
-
-Etiam sed porta diam. Duis at ligula ac sapien porttitor pharetra ac facilisis sem. In egestas, mi a feugiat ultricies, ex justo laoreet enim, eget mollis sapien dolor a purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac elementum quam. Sed eu rutrum mauris. Morbi a facilisis nisi. Nulla porttitor sagittis dignissim. Praesent sed auctor erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean hendrerit mi eget diam cursus, in vulputate velit auctor. Sed fermentum odio neque, vel varius odio luctus a.
-
-Curabitur felis diam, varius id lorem id, ornare bibendum tellus. Praesent urna mi, faucibus eu accumsan a, fermentum eu libero. Duis posuere imperdiet ligula, quis pharetra quam sodales a. Integer laoreet commodo sollicitudin. Quisque tincidunt id eros non pharetra. Mauris posuere a sem ac rutrum. Suspendisse laoreet dictum orci et dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed condimentum, est at vehicula dapibus, nisi sem fringilla quam, pretium dictum orci ligula eget quam. Cras rhoncus non diam non rutrum. Aenean in risus leo. Pellentesque eleifend sed orci in vehicula. Nunc mattis, urna et lobortis feugiat, ligula quam rhoncus urna, sit amet dictum tortor nisl nec ex.
-
-In felis metus, facilisis nec aliquet quis, fermentum et justo. Praesent cursus id nunc elementum ultrices. Donec placerat metus in blandit laoreet. Fusce vehicula ipsum ac nibh rutrum tempor. Suspendisse mattis ligula id mi luctus, sit amet faucibus enim porta. Curabitur a nisl quis ante porttitor feugiat. Maecenas sed magna ac arcu dignissim scelerisque. Vestibulum at dignissim metus, nec tristique metus. Donec maximus ligula a nisl luctus, at sagittis mi rutrum. Etiam vitae risus accumsan, egestas lacus id, ultrices augue. Vivamus gravida ac turpis non imperdiet. Proin nec massa tempor, auctor nibh sit amet, sodales odio. Maecenas leo nunc, blandit a ornare non, scelerisque sed ligula.
-
-Morbi non laoreet nibh. Sed nec neque ullamcorper, tempus mi sed, blandit lacus. Mauris scelerisque, diam et fringilla placerat, nisi ipsum egestas risus, ac sagittis ante tortor vel nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed placerat consectetur aliquam. Etiam mattis suscipit magna, nec tristique sem pretium vitae. Fusce nec ipsum ac ipsum viverra pulvinar eget condimentum purus. Praesent ut sagittis nisi, eget elementum tortor. Morbi nulla sapien, molestie ac erat eget, tristique elementum arcu. Aenean sodales lobortis velit, et iaculis enim mollis a. Curabitur finibus est vitae sapien condimentum egestas.</p>
-
+<div class="footer">
 <p class="copyright">Website created by Jacy Mark</p>
 <p class="copyright"> Background from freepik.com</p>
+</div>
 </body>
 </html>
 <!-----------------TODO------------------>
