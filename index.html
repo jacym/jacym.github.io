@@ -9,6 +9,32 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/custom.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 <style>
 div.gallery{
   position:relative;
@@ -27,12 +53,13 @@ div.gallery{
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: gray;
 }
 .text {
   color: white;
   font-size: 20px;
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -40,14 +67,32 @@ div.gallery{
 }
 
 div.gallery:hover .overlay{
-  opacity:0.5;
+  opacity:0.80;
 }
 
 div.gallery img{
-  width:auto;
-  height: auto;
+  margin: 5px;
+  float:none;
+  width: 400px;
+  height: 400px;
 }
 
+div.projecttitle{
+  font-size: 30px;
+  text-align:center;
+}
+h1.descname{
+  padding-bottom: 10%;
+  padding-right: 10%;
+  text-align:right;
+  color:white;
+}
+p.desc{
+  color: white;
+  font-size: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 p.copyright{
     color:black;
     font-family: Raleway, sans-serif;
@@ -75,19 +120,46 @@ body,html{
     height:100%;
 }
 div.parallax{
-    background-color:darkgoldenrod;
-    height:50%;
+    background-image:url("Front-page2.jpg");
+    height:60%;
+    background-position:center;
     background-attachment:fixed;
-    background-position-y: -120px;
     background-repeat:no-repeat;
     background-size: cover;
 }
 div.footer {
-    position:fixed;
-    width:100%;
-    text-align:center;
-    bottom: 0px;
-    margin-bottom:0px;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+/* ABOUT ME SIDEBYSIDE */
+article {
+  position: relative;
+  top: 30%;
+  text-align: center;
+  padding: 1rem;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+
+.left-half {
+  background-image:url("personal.jpg");
+  height: 80vh;
+  width:100vh;
+  background-position: center;
+  grid-column: 1;
+}
+.right-half {
+  background: #565656;
+  height:80vh;
+  width:100vh;
+  grid-column: 2;
 }
 </style>
 <title>Jacy Mark</title>
@@ -103,7 +175,7 @@ div.footer {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a style=font-size:40px;width:auto; class="navbar-brand smoothScroll nav" href="#">Jacy Mark</a>
+      <a style=font-size:40px;width:auto; class="navbar-brand smoothScroll nav" href="#home">Jacy Mark</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -115,35 +187,58 @@ div.footer {
     </div>
   </div>
 </nav>
-<a name="home"></a>
+<a name="home" id="home"></a>
 <div class="parallax">
-  <div style=margin-top:4%;>
-    <h1 style=font-family:Raleway,sans-serif;text-align:center;font-size:80px;>Jacy's WebDev Playground</h1>
-  </div>
 </div>
-<div style="height:500px;">
-  <h1 style=font-family:Raleway,sans-serif;>Projects</h1>
-  <!---start of projects gallery --->
+<!--PROJECTS-->
+<a name="projects" id="projects"></a>
+  <h1 style="font:Raleway;padding-left:10%;font-size:50px;">Projects</h1>
   <div class="gallery">
-    <a target="_blank" href="monitor_frame.png">
-      <img src="monitor_frame.png" alt="monitor" width="300" height="200">
+    <img src="storytree.png">
+    <!--<a href="./storytree.html">-->
+      <a href="https://devpost.com/software/storytree">
       <div class="overlay">
-        <div class="text"> Project 1 </div>
+        <div class="text"> StoryTree </div>
       </div>
     </a>
   </div>
   <div class="gallery">
-    <a target="_blank" href="monitor_frame.png">
-      <img src="monitor_frame.png" alt="monitor" width="300" height="200">
+    <img src="HabitTracker.png">
+    <!--<a href="./habittracker.html">-->
+      <a href="https://github.com/CMPUT301F17T16/HabitTracker2017">
       <div class="overlay">
-        <div class="text"> Project 2 </div>
+        <div class="text"> Habit Tracker for Android </div>
       </div>
     </a>
   </div>
+  <div class="gallery">
+    <img src="banner.png">
+    <div class="overlay">
+      <div class="text">  MORE TO COME </div>
+    </div>
+  </div>
+<!-- ABOUT ME -->
+<div class="container">
+  <a name="about" id="about"></a>
+  <div class="left-half">
+  </div>
+  <div class="right-half">
+    <article>
+      <h1 class="descname">Jacy Mark</h1>
+      <p class="desc">Jacy was born and raised in Vancouver. He moved to Edmonton for university and is currently looking for an internship for summer 2018. He has a wide range of skills including web development, app development, and data manipulation. Jacy constantly strives to learn more and explore computer science with a passion, ingesting as much knowledge and experience as he can. If you are interested in speaking with him or interviewing for an internship position, checkout his resume or send him an email at jacy@dragonfruitcode.com</p>
+    </article>
+  </div>
 </div>
-<div class="parallax"></div>
+<a name="contact" id="contact"></a>
+<div style="height:30vh;padding-left:10%;">
+  <h1 style="font:Raleway;font-size:50px;">Contact</h1>
+  <p>email:jacy@dragonfruitcode.com</p>
+  <p><a href="https://www.linkedin.com/in/jacym/">linkedin: https://www.linkedin.com/in/jacym/ </a></p>
+  <p><a href="https://github.com/jacym">github: https://github.com/jacym </a></p>
+</div>
 <div class="footer">
-<p>Website created by Jacy Mark</p>
+  <p> Website created by Jacy Mark</p>
+  <p>jacy@dragonfruitcode.com </p>
 </div>
 </body>
 </html>
@@ -151,6 +246,4 @@ div.footer {
 <!--
 -fix website for mobile devices
 -make it responsive
--enlarge poster image
--finish nav bar tab locations
 //-->
