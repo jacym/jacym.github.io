@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/smoothscroll.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+div.gallery{
+  position:relative;
+  margin:5px;
+  float: left;
+  width:auto;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: gray;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+div.gallery:hover .overlay{
+  opacity:0.80;
+}
+
+div.gallery img{
+  margin: 5px;
+  float:none;
+  width: 400px;
+  height: 400px;
+}
+
+div.projecttitle{
+  font-size: 30px;
+  text-align:center;
+}
+h1.descname{
+  padding-bottom: 10%;
+  padding-right: 10%;
+  text-align:right;
+  color:white;
+}
+p.copyright{
+    color:black;
+    font-family: Raleway, sans-serif;
+    font-size: 10px;
+    clear: both;
+    position: relative;
+    z-index: 0;
+    height: 3em;
+    margin-top: -3em;
+    display:block;
+    text-align: center;
+    bottom:0;
+}
+
+/*div.statich{
+    width:100%;
+    height:120px;
+    background-color:black;
+    box-shadow: 10px 10px 0px #888888;
+    position:fixed;
+    top:0;
+    left:0;
+}*/
+body,html{
+    height:100%;
+}
+div.parallax{
+    background-image:url("Front-page2.jpg");
+    height:60%;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+div.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+/* ABOUT ME SIDEBYSIDE */
+article {
+  position: relative;
+  top: 30%;
+  text-align: center;
+  padding: 1rem;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+
+.left-half {
+  background-image:url("personal.jpg");
+  height: 80vh;
+  width:100vh;
+  background-position: center;
+  grid-column: 1;
+}
+.right-half {
+  background: #565656;
+  height:80vh;
+  width:100vh;
+  grid-column: 2;
+}
+</style>
+<title>Jacy Mark</title>
+</head>
+<body>
+<!--<div class="statich"></div>-->
+<!-- -----------header objects--------- -->
+<nav style=font-family:Raleway,sans-serif;font-size:20px;width:auto; class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style=font-size:40px;width:auto; class="navbar-brand smoothScroll nav" href="./index.html">Jacy Mark</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.dragonfruitcode.com">DragonFruit CodingHouse</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1 style="padding-top:70px;text-align:center;font-size:100px;">STORYTREE</h1>
+
+<div class="footer">
+  <p> Website created by Jacy Mark</p>
+  <p>jacy@dragonfruitcode.com </p>
+</div>
+</body>
+</html>
+<!-----------------TODO------------------>
+<!--
+-fix website for mobile devices
+-make it responsive
+//-->
