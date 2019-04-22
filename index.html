@@ -1,249 +1,208 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script type="text/javascript" src="javascript/smoothscroll.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" type="image/png" href="favicon.png"/>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/custom.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-<style>
-div.gallery{
-  position:relative;
-  margin:5px;
-  float: left;
-  width:auto;
-}
-
-.overlay{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: gray;
-}
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
-div.gallery:hover .overlay{
-  opacity:0.80;
-}
-
-div.gallery img{
-  margin: 5px;
-  float:none;
-  width: 400px;
-  height: 400px;
-}
-
-div.projecttitle{
-  font-size: 30px;
-  text-align:center;
-}
-h1.descname{
-  padding-bottom: 10%;
-  padding-right: 10%;
-  text-align:right;
-  color:white;
-}
-p.desc{
-  color: white;
-  font-size: 15px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-p.copyright{
-    color:black;
-    font-family: Raleway, sans-serif;
-    font-size: 10px;
-    clear: both;
-    position: relative;
-    z-index: 0;
-    height: 3em;
-    margin-top: -3em;
-    display:block;
-    text-align: center;
-    bottom:0;
-}
-
-/*div.statich{
-    width:100%;
-    height:120px;
-    background-color:black;
-    box-shadow: 10px 10px 0px #888888;
-    position:fixed;
-    top:0;
-    left:0;
-}*/
-body,html{
-    height:100%;
-}
-div.parallax{
-    background-image:url("Front-page2.jpg");
-    height:60%;
-    background-position:center;
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-    background-size: cover;
-}
-div.footer {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
-}
-/* ABOUT ME SIDEBYSIDE */
-article {
-  position: relative;
-  top: 30%;
-  text-align: center;
-  padding: 1rem;
-}
-.container {
-  height: 100%;
-  width: 100%;
-  display: grid;
-}
-
-.left-half {
-  background-image:url("personal.jpg");
-  height: 80vh;
-  width:100vh;
-  background-position: center;
-  grid-column: 1;
-}
-.right-half {
-  background: #565656;
-  height:80vh;
-  width:100vh;
-  grid-column: 2;
-}
-</style>
-<title>Jacy Mark</title>
-</head>
-<body>
-<!--<div class="statich"></div>-->
-<!-- -----------header objects--------- -->
-<nav style=font-family:Raleway,sans-serif;font-size:20px;width:auto; class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a style=font-size:40px;width:auto; class="navbar-brand smoothScroll nav" href="#home">Jacy Mark</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#projects" class="smoothScroll nav">Projects</a></li>
-        <li><a href="#contact" class="smoothScroll nav">Contact</a></li>
-        <li><a href="https://www.dragonfruitcode.com">DragonFruit CodingHouse</a></li>
-        <li><a href="#about" class="smoothScroll nav">About</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<a name="home" id="home"></a>
-<div class="parallax">
-</div>
-<!--PROJECTS-->
-<a name="projects" id="projects"></a>
-  <h1 style="font:Raleway;padding-left:10%;font-size:50px;">Projects</h1>
-  <div class="gallery">
-    <img src="storytree.png">
-    <!--<a href="./storytree.html">-->
-      <a href="https://devpost.com/software/storytree">
-      <div class="overlay">
-        <div class="text"> StoryTree </div>
-      </div>
-    </a>
-  </div>
-  <div class="gallery">
-    <img src="Habittracker.png">
-    <!--<a href="./habittracker.html">-->
-      <a href="https://github.com/CMPUT301F17T16/HabitTracker2017">
-      <div class="overlay">
-        <div class="text"> Habit Tracker for Android </div>
-      </div>
-    </a>
-  </div>
-  <div class="gallery">
-    <img src="banner.png">
-    <div class="overlay">
-      <div class="text">  MORE TO COME </div>
-    </div>
-  </div>
-<!-- ABOUT ME -->
-<div class="container">
-  <a name="about" id="about"></a>
-  <div class="left-half">
-  </div>
-  <div class="right-half">
-    <article>
-      <h1 class="descname">Jacy Mark</h1>
-      <p class="desc">Jacy was born and raised in Vancouver. He moved to Edmonton for university and is currently looking for an internship for summer 2018. He has a wide range of skills including web development, app development, and data manipulation. Jacy constantly strives to learn more and explore computer science with a passion, ingesting as much knowledge and experience as he can. If you are interested in speaking with him or interviewing for an internship position, checkout his resume or send him an email at jacy@dragonfruitcode.com</p>
-    </article>
-  </div>
-</div>
-<a name="contact" id="contact"></a>
-<div style="height:30vh;padding-left:10%;">
-  <h1 style="font:Raleway;font-size:50px;">Contact</h1>
-  <p>email:jacy@dragonfruitcode.com</p>
-  <p><a href="https://www.linkedin.com/in/jacym/">linkedin: https://www.linkedin.com/in/jacym/ </a></p>
-  <p><a href="https://github.com/jacym">github: https://github.com/jacym </a></p>
-</div>
-<div class="footer">
-  <p> Website created by Jacy Mark</p>
-  <p>jacy@dragonfruitcode.com </p>
-</div>
-</body>
-</html>
-<!-----------------TODO------------------>
+<!DOCTYPE HTML>
 <!--
--fix website for mobile devices
--make it responsive
-//-->
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jacy Mark</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<a name="home"></a>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Jacy Mark</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="#home">Home</a></li>
+								<li><a href="#me">About</a></li>
+								<li><a href="#DC">Dragonfruit CodingHouse</a></li>
+								<li><a href="#projects">Projects</a></li>
+								<li><a href="#footer">Contact</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<header>
+								<h2>Jacy Mark</h2>
+								<p>Student - Programmer - Data Scientist - Entrepreneur</p>
+							</header>
+							<span class="image"><img src="images/casual.jpg" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<!-- One -->
+						<a name="me">
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/personal.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">About Jacy</h2>
+										<p>Jacy was born and raised in Vancouver. He is currently Edmonton for university and is currently looking for an internship for summer 2019. He has a wide range of skills including web development, app development, and data manipulation. Jacy constantly strives to learn more and explore computer science with a passion, ingesting as much knowledge and experience as he can. If you are interested in speaking with him or interviewing for an internship position, checkout his resume or send him an email at jacy@dragonfruitcode.com</p>
+									</div>
+								</div>
+							</section>
+						</a>
+
+						<!-- Two -->
+							<section id="DC" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/front-page2.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">DragonFruit CodingHouse</h2>
+										<p>DragonFruit CodingHouse is a company co founded by Jacy and 3 others in 2014. It specializes in working with small businesses and building their online platforms and digital presence. DragonFruit CodingHouse aids aspiring startups, established businesses, and individuals create a digital presence while helping them become independent along the way.</p>
+										<a href="https://dragonfruitcode.com" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
+						<section id="projects" class="wrapper alt style1">
+							<div class="inner">
+								<h2>Projects</h2>
+								<section class="tiles">
+										<article class="style1">
+											<span class="image">
+												<img src="images/storytree.png" alt="" />
+											</span>
+											<a href="underconstruction.html">
+												<h2>StoryTree</h2>
+												<div class="content">
+													<p>Platform to build stories collaboratively. Hack the North 2017 Winner.</p>
+												</div>
+											</a>
+										</article>
+										<article class="style2">
+											<span class="image">
+												<img src="images/Habittracker.png" alt="" />
+											</span>
+											<a href="underconstruction1.html">
+												<h2>Habit Tracker For Android</h2>
+												<div class="content">
+													<p style="background-color:rgba(0,0,0,0.5);">Android app to help track your habits. Metrics, habit sharing, and more!</p>
+												</div>
+											</a>
+										</article>
+										<article class="style3">
+											<span class="image">
+												<img src="images/twitch.png" alt="" />
+											</span>
+											<a href="underconstruction2.html">
+												<h2>Featuring</h2>
+												<div class="content">
+													<p>Twitch extension to aid large and small twitchTV streamers by showing the other streamers they're playing with on screen.</p>
+												</div>
+											</a>
+										</article>
+										<article class="style2">
+											<span class="image">
+												<img src="images/dis.png" alt="" />
+											</span>
+											<a href="underconstruction3.html">
+												<h2>Document indexing and Search</h2>
+												<div class="content">
+													<p>Program to take in a directory of documents and produce an inverted positional index that can be used with the search program. Scores and ranks documents relating to search query</p>
+												</div>
+											</a>
+										</article>
+										<article class="style3">
+											<span class="image">
+												<img src="images/graph.jpg" alt="" />
+											</span>
+											<a href="underconstruction4.html">
+												<h2>Targeted Prmotions Based Off Spending Habits</h2>
+												<div class="content">
+													<p style="background-color:rgba(0,0,0,0.5);" >Data science project for ATB datathon. Using synthesized customer data, built a model to assign promotional offers to customers based on income, spending habits, and age all weighted against an ethical score.</p>
+												</div>
+											</a>
+										</article>
+										<article class="style1">
+											<span class="image">
+												<img src="images/dis.png" alt="" />
+											</span>
+											<a href="underconstruction5.html">
+												<h2>K-Nearest Neighbours Document Classification</h2>
+												<div class="content">
+													<p>Classify document topics using the k-nearest neighbours algorithm and cosine similarity scores.</p>
+												</div>
+											</a>
+										</article>
+									</section>
+								</div>
+							</section>
+					</section>
+					
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Feel free to use any of the contact methods below to contact me!</p>
+							<!--<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>-->
+							<ul class="contact">
+								<li class="fa-phone">(780) 680-1756</li>
+								<li class="fa-envelope"><a href="#">jacy@dragonfruitcode.com</a></li>
+								<!--edit these for linkedin and github -->
+								<li class="fa-twitter"><a href="#">linkedin.com/in/jacym</a></li>
+								<li class="fa-github"><a href="#">github.com/jacym</a></li>
+								<li class="fa-facebook"><a href="#">facebook.com/jacy.mark.3</a></li>
+								<li class="fa-instagram"><a href="#">instagram.com/jacy_m97</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Jacy Mark. All rights reserved.</li><li>Based off template: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+
+	</body>
+</html>
