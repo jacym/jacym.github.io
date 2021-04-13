@@ -3619,7 +3619,7 @@ input, select, textarea {
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-color: #272833;
-		background-image: url("https://jacym.github.io/jacym.github.io/images/banner.JPG");
+		background-image: url("../../images/banner.JPG");
 		background-size: cover;
 		background-position: center center;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
